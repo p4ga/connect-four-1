@@ -12,7 +12,7 @@ public class ConnectFourTest {
     public void place_WhenTokenPlacedInColumnB_ThenTokenShouldEndUpInRowOne(){
         ConnectFour game = new ConnectFour();
         String player = "Y";
-        String column = "B";
+        int column = 2;
 
         String expectedBefore =
                 "OOOOOOO\n" +

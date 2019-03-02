@@ -54,9 +54,22 @@ public class ConnectFour{
         board.add(rowSix);
     }
 
-    public void place(String player, String column) {
+    public void place(String player, int column) {
+        List<String> previousRow = null;
+        int numberOfRows = board.size();
+        int currentRowNumber = 0;
+        int zeroBasedColumnNumber = column - 1;
+
         for (List<String> row : board) {
-            
+            currentRowNumber++;
+            String value = row.get(zeroBasedColumnNumber);
+
+            if(!"O".equals(value)){
+                previousRow.add(zeroBasedColumnNumber, player);
+            }else if (currentRowNumber == numberOfRows){
+                row.add(zeroBasedColumnNumber, player);
+            }
+            previousRow = row;
         }
     }
 
