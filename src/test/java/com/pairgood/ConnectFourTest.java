@@ -40,4 +40,33 @@ public class ConnectFourTest {
         assertEquals(expectedAfter, game.check());
 
     }
+
+
+    @Test
+    public void place_ScratchPad(){
+        ConnectFour game = new ConnectFour();
+        String playerOne = "Y";
+        int column = 2;
+
+
+        String expectedAfter =
+                "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOYO\n" +
+                        "YOOOOYO\n" +
+                        "YOOOOYO\n";
+
+        //When
+        game.place(playerOne, 1);
+        game.place(playerOne, 1);
+
+        game.place(playerOne, 6);
+        game.place(playerOne, 6);
+        game.place(playerOne, 6);
+
+        //Then
+        assertEquals(expectedAfter, game.check());
+
+    }
 }

@@ -5,7 +5,8 @@ import java.util.List;
 
 public class ConnectFour{
 
-    List<List<String>> board;
+    public static final String EMPTY_PLACEHOLDER = "O";
+    private List<List<String>> board;
 
     public ConnectFour(){
         board = new ArrayList<>();
@@ -13,37 +14,37 @@ public class ConnectFour{
         List<String> rowOne = new ArrayList<>();
 
         for(int i = 0 ; i < 7; i++){
-            rowOne.add("O");
+            rowOne.add(EMPTY_PLACEHOLDER);
         }
 
         List<String> rowTwo = new ArrayList<>();
 
         for(int i = 0 ; i < 7; i++){
-            rowTwo.add("O");
+            rowTwo.add(EMPTY_PLACEHOLDER);
         }
 
         List<String> rowThree = new ArrayList<>();
 
         for(int i = 0 ; i < 7; i++){
-            rowThree.add("O");
+            rowThree.add(EMPTY_PLACEHOLDER);
         }
 
         List<String> rowFour = new ArrayList<>();
 
         for(int i = 0 ; i < 7; i++){
-            rowFour.add("O");
+            rowFour.add(EMPTY_PLACEHOLDER);
         }
 
         List<String> rowFive = new ArrayList<>();
 
         for(int i = 0 ; i < 7; i++){
-            rowFive.add("O");
+            rowFive.add(EMPTY_PLACEHOLDER);
         }
 
         List<String> rowSix = new ArrayList<>();
 
         for(int i = 0 ; i < 7; i++){
-            rowSix.add("O");
+            rowSix.add(EMPTY_PLACEHOLDER);
         }
 
         board.add(rowOne);
@@ -64,7 +65,7 @@ public class ConnectFour{
             currentRowNumber++;
             String value = row.get(zeroBasedColumnNumber);
 
-            if(!"O".equals(value)){
+            if(!EMPTY_PLACEHOLDER.equals(value)){
                 previousRow.set(zeroBasedColumnNumber, player);
             }else if (currentRowNumber == numberOfRows){
                 row.set(zeroBasedColumnNumber, player);
