@@ -65,9 +65,9 @@ public class ConnectFour{
             String value = row.get(zeroBasedColumnNumber);
 
             if(!"O".equals(value)){
-                previousRow.add(zeroBasedColumnNumber, player);
+                previousRow.set(zeroBasedColumnNumber, player);
             }else if (currentRowNumber == numberOfRows){
-                row.add(zeroBasedColumnNumber, player);
+                row.set(zeroBasedColumnNumber, player);
             }
             previousRow = row;
         }
