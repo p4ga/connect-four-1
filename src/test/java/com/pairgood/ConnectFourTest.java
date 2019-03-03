@@ -71,7 +71,7 @@ public class ConnectFourTest {
     }
 
     @Test
-    public void check_forYellowFourInRow(){
+    public void check_forFourInHorizontalRow(){
         ConnectFour game = new ConnectFour();
         String playerOne = "Y";
         int column = 2;
@@ -90,6 +90,31 @@ public class ConnectFourTest {
         game.place(playerOne, 2);
         game.place(playerOne, 3);
         game.place(playerOne, 4);
+
+        //Then
+        assertEquals(expectedAfter, game.check());
+
+    }
+    @Test
+    public void check_forFourInVerticalRow(){
+        ConnectFour game = new ConnectFour();
+        String playerOne = "Y";
+        int column = 2;
+
+
+        String expectedAfter =
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "YOOOOOO\n" +
+                        "YOOOOOO\n" +
+                        "YOOOOOO\n" +
+                        "YOOOOOO\n";
+
+        //When
+        game.place(playerOne, 1);
+        game.place(playerOne, 1);
+        game.place(playerOne, 1);
+        game.place(playerOne, 1);
 
         //Then
         assertEquals(expectedAfter, game.check());
