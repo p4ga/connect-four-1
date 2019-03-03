@@ -15,7 +15,7 @@ public class ConnectFourTest {
         int column = 2;
 
         String expectedBefore =
-                "OOOOOOO\n" +
+                        "OOOOOOO\n" +
                         "OOOOOOO\n" +
                         "OOOOOOO\n" +
                         "OOOOOOO\n" +
@@ -23,7 +23,7 @@ public class ConnectFourTest {
                         "OOOOOOO\n";
 
         String expectedAfter =
-                "OOOOOOO\n" +
+                        "OOOOOOO\n" +
                         "OOOOOOO\n" +
                         "OOOOOOO\n" +
                         "OOOOOOO\n" +
@@ -50,7 +50,7 @@ public class ConnectFourTest {
 
 
         String expectedAfter =
-                "OOOOOOO\n" +
+                        "OOOOOOO\n" +
                         "OOOOOOO\n" +
                         "OOOOOOO\n" +
                         "OOOOOYO\n" +
@@ -64,6 +64,32 @@ public class ConnectFourTest {
         game.place(playerOne, 6);
         game.place(playerOne, 6);
         game.place(playerOne, 6);
+
+        //Then
+        assertEquals(expectedAfter, game.check());
+
+    }
+
+    @Test
+    public void check_forYellowFourInRow(){
+        ConnectFour game = new ConnectFour();
+        String playerOne = "Y";
+        int column = 2;
+
+
+        String expectedAfter =
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "YYYYOOO\n";
+
+        //When
+        game.place(playerOne, 1);
+        game.place(playerOne, 2);
+        game.place(playerOne, 3);
+        game.place(playerOne, 4);
 
         //Then
         assertEquals(expectedAfter, game.check());
