@@ -16,19 +16,19 @@ public class ConnectFourTest {
 
         String expectedBefore =
                 "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OOOOOOO\n";
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n";
 
         String expectedAfter =
                 "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OOOOOOO\n" +
-                "OYOOOOO\n";
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OOOOOOO\n" +
+                        "OYOOOOO\n";
 
         //Given
         assertEquals(expectedBefore, game.check());

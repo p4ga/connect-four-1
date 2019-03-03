@@ -1,3 +1,4 @@
+
 package com.pairgood;
 
 import java.util.ArrayList;
@@ -77,10 +78,10 @@ public class ConnectFour{
     public String check() {
         String output = "";
         for (List<String> row : board) {
-           for(String value : row){
-               output += value;
-           }
-           output += "\n";
+            for(String value : row){
+                output += value;
+            }
+            output += "\n";
         }
         return output;
     }
